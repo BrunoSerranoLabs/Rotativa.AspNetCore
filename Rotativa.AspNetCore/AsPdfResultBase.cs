@@ -1,6 +1,5 @@
 ﻿using Rotativa.AspNetCore.Options;
 using System;
-using System.Linq;
 using System.Text;
 
 namespace Rotativa.AspNetCore
