@@ -1,9 +1,7 @@
-﻿using System.Threading.Tasks;
-
-namespace Rotativa.AspNetCore
+﻿namespace Rotativa.NetStandard
 {
     public class TransformToPdf : TransformToPdfBase
     {
-        public byte[] Transform(string html) => WkhtmltopdfDriver.ConvertHtml(this.WkhtmlPath, this.GetConvertOptions(), html);
+        public byte[] Transform(string html) => WkhtmltopdfDriver.ConvertHtml(WkhtmlPath, GetConvertOptions(), html);
     }
 }

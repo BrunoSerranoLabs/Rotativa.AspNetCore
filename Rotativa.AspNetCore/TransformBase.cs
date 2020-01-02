@@ -1,4 +1,4 @@
-using Rotativa.AspNetCore.Options;
+using Rotativa.NetStandard.Options;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,13 +6,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Rotativa.AspNetCore
+namespace Rotativa.NetStandard
 {
     public abstract class TransformBase
     {
         protected TransformBase()
         {
-            this.WkhtmlPath = string.Empty;
+            WkhtmlPath = string.Empty;
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Rotativa.AspNetCore
         {
             var result = new StringBuilder();
 
-            var fields = this.GetType().GetProperties();
+            var fields = GetType().GetProperties();
             foreach (var fi in fields)
             {
                 var of = fi.GetCustomAttributes(typeof(OptionFlag), true).FirstOrDefault() as OptionFlag;
@@ -125,25 +125,25 @@ namespace Rotativa.AspNetCore
             return result.ToString().Trim();
         }
 
-        private string GetWkParams() => this.GetConvertOptions();
+        private string GetWkParams() => GetConvertOptions();
 
         protected virtual byte[] CallTheDriver()
         {
-            var switches = this.GetWkParams();
-            return this.WkhtmlConvert(switches);
+            var switches = GetWkParams();
+            return WkhtmlConvert(switches);
         }
 
         protected abstract byte[] WkhtmlConvert(string switches);
 
         public byte[] BuildFile()
         {
-            this.WkhtmlPath = RotativaConfiguration.RotativaPath;
+            WkhtmlPath = RotativaConfiguration.RotativaPath;
 
             var fileContent = CallTheDriver();
 
-            if (!string.IsNullOrEmpty(this.SaveOnServerPath))
+            if (!string.IsNullOrEmpty(SaveOnServerPath))
             {
-                File.WriteAllBytes(this.SaveOnServerPath, fileContent);
+                File.WriteAllBytes(SaveOnServerPath, fileContent);
             }
 
             return fileContent;

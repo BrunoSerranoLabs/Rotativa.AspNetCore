@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Rotativa.AspNetCore.Options
+namespace Rotativa.NetStandard.Options
 {
     public class Margins
     {

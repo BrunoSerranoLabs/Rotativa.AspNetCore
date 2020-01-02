@@ -1,14 +1,14 @@
-﻿using Rotativa.AspNetCore.Options;
+﻿using Rotativa.NetStandard.Options;
 using System;
 using System.Text;
 
-namespace Rotativa.AspNetCore
+namespace Rotativa.NetStandard
 {
     public abstract class TransformToPdfBase : TransformBase
     {
         protected TransformToPdfBase()
         {
-            this.PageMargins = new Margins();
+            PageMargins = new Margins();
         }
         /// <summary>
         /// Sets the page size.
@@ -43,7 +43,7 @@ namespace Rotativa.AspNetCore
 
         protected override byte[] WkhtmlConvert(string switches)
         {
-            return WkhtmltopdfDriver.Convert(this.WkhtmlPath, switches);
+            return WkhtmltopdfDriver.Convert(WkhtmlPath, switches);
         }
 
         protected override string GetContentType()
@@ -59,11 +59,11 @@ namespace Rotativa.AspNetCore
         {
             get
             {
-                return this.WkhtmlPath;
+                return WkhtmlPath;
             }
             set
             {
-                this.WkhtmlPath = value;
+                WkhtmlPath = value;
             }
         }
 
@@ -89,8 +89,8 @@ namespace Rotativa.AspNetCore
         {
             var result = new StringBuilder();
 
-            if (this.PageMargins != null)
-                result.Append(this.PageMargins.ToString());
+            if (PageMargins != null)
+                result.Append(PageMargins.ToString());
 
             result.Append(" ");
             result.Append(base.GetConvertOptions());

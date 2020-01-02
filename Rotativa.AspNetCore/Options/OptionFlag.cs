@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rotativa.AspNetCore.Options
+namespace Rotativa.NetStandard.Options
 {
     class OptionFlag : Attribute
     {

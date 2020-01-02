@@ -1,7 +1,6 @@
-﻿using System.IO;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
-namespace Rotativa.AspNetCore
+namespace Rotativa.NetStandard
 {
     public class WkhtmltopdfDriver : WkhtmlDriver
     {
