@@ -3,16 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.1</Version>
+    <Version>1.0</Version>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <RepositoryUrl>https://github.com/webgio/Rotativa.AspNetCore</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/webgio/Rotativa.AspNetCore</PackageProjectUrl>
-    <Company>Viva Software di Bozio Giorgio</Company>
-    <Authors>Giorgio Bozio</Authors>
-    <Description>Rotativa: PDF easy creation for Asp.Net Core</Description>
-    <PackageReleaseNotes>fix for view relative path</PackageReleaseNotes>
-    <PackageTags>PDF AspNetCore</PackageTags>
-    <Copyright>2018 Viva Software di Bozio Giorgio</Copyright>
+    <RepositoryUrl>https://github.com/BrunoSerranoLabs/Rotativa.AspNetCore</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/BrunoSerranoLabs/Rotativa.AspNetCore</PackageProjectUrl>
+    <Company>Bruno Serrano Labs</Company>
+    <Authors>Bruno Serrano</Authors>
+    <Description>Rotativa: PDF easy creation for NetStandard</Description>
+    <PackageTags>PDF NetStandard</PackageTags>
+    <Copyright>2020 Bruno Serrano Labs</Copyright>
   </PropertyGroup>
 
   <!--<ItemGroup>
