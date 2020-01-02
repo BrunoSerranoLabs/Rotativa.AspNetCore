@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Rotativa.AspNetCore
 {
-    public abstract class AsPdfResultBase : AsResultBase
+    public abstract class TransformToPdfBase : TransformBase
     {
-        protected AsPdfResultBase()
+        protected TransformToPdfBase()
         {
             this.PageMargins = new Margins();
         }

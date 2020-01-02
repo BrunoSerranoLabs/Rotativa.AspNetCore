@@ -2,11 +2,8 @@
 
 namespace Rotativa.AspNetCore
 {
-    public class TransformToPdf : AsPdfResultBase
+    public class TransformToPdf : TransformToPdfBase
     {
-        public async Task<byte[]> Transform(string html)
-        {
-            return WkhtmltopdfDriver.ConvertHtml(this.WkhtmlPath, this.GetConvertOptions(), html);
-        }
+        public byte[] Transform(string html) => WkhtmltopdfDriver.ConvertHtml(this.WkhtmlPath, this.GetConvertOptions(), html);
     }
 }

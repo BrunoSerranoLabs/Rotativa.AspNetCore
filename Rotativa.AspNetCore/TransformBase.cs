@@ -8,9 +8,9 @@ using System.Text;
 
 namespace Rotativa.AspNetCore
 {
-    public abstract class AsResultBase
+    public abstract class TransformBase
     {
-        protected AsResultBase()
+        protected TransformBase()
         {
             this.WkhtmlPath = string.Empty;
         }
